@@ -25,7 +25,7 @@ if "." in version:
     if new_version[0] == y0 and new_version[1] == mm:
         new_version[2] += 1
 
-if new_version == None:
+if new_version is None:
     new_version = [y0, mm, 0]
 
 final_version = ".".join(["{:02d}".format(i) for i in new_version[:2]] + [str(new_version[2])])
